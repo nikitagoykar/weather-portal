@@ -1,0 +1,23 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - git   # or whichever branch you want to deploy from
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      # If you ever have dependencies (e.g. npm install), build, etc. add here.
+      # For pure HTML/CSS/JS static, you can skip build steps if none needed.
+
+      - name: Deploy to Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./   # since your static site is at root
+          publish_branch: gh-pages  # optional; or you can direct to same branch
