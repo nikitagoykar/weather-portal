@@ -1,0 +1,173 @@
+/* ------------------------------
+   General Body & App Layout
+------------------------------ */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Fairytale gradient background */
+  background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%);
+  background-attachment: fixed;
+}
+
+.app-container {
+  width: 360px;
+  max-width: 95%;
+  padding: 20px;
+  border-radius: 25px;
+
+  /* Glassmorphism effect */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* ------------------------------
+   Header / City Name
+------------------------------ */
+.city-name {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.city-name i {
+  color: #ffd166;
+  margin-right: 8px;
+}
+
+.city-name h1 {
+  font-size: 28px;
+  font-weight: 600;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.9),
+               0 0 25px #fbc2eb,
+               0 0 45px #a18cd1;
+}
+
+/* ------------------------------
+   Weather Icon
+------------------------------ */
+.weather-icon-css {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.weather-icon {
+  width: 120px;
+  height: auto;
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.7));
+}
+
+/* ------------------------------
+   Weather Details
+------------------------------ */
+.weather-description {
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.show-metric {
+  font-size: 50px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.weather-details {
+  font-size: 16px;
+}
+
+.h-f {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.divider {
+  color: #fff;
+  opacity: 0.7;
+}
+
+/* ------------------------------
+   Forecast Boxes
+------------------------------ */
+.forcasts-box {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.fancy-card {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.today-forecast h4,
+.future-forecast h5 {
+  margin: 5px 0 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.weather-icon-today img,
+.weather-icons {
+  width: 60px;
+  margin: 10px 0;
+}
+
+.temp-today {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.weather-main-today {
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+/* ------------------------------
+   Navigation Bar
+------------------------------ */
+.bottom-nav {
+  margin-top: 20px;
+}
+
+.bottom-nav ul {
+  display: flex;
+  justify-content: space-around;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 30px;
+  padding: 12px;
+  list-style: none;
+  margin: 0;
+  backdrop-filter: blur(12px);
+}
+
+.bottom-nav li {
+  list-style: none;
+}
+
+.bottom-nav a {
+  color: #fff;
+  font-size: 22px;
+  transition: all 0.3s ease;
+}
+
+.bottom-nav a.active,
+.bottom-nav a:hover {
+  color: #ffd166;
+  transform: scale(1.2);
+}
